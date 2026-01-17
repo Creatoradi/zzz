@@ -26,9 +26,25 @@ header .container { display: flex; justify-content: space-between; align-items: 
 
 .logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-size: 32px; /* Увеличили размер */
+    letter-spacing: 5px; /* Растянули буквы для эффекта "люкс" */
     font-weight: 600;
+    text-transform: uppercase; /* Всегда заглавные */
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Добавим элегантную золотистую полоску под логотипом */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: var(--accent-gold);
+}
 }
 
 .hero {
